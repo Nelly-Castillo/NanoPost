@@ -6,14 +6,15 @@ const mysql = require('mysql');
 
 const conn = require('../config/database');
 
+
 // JSON web tokens
 const jwt = require('jsonwebtoken');
 
 router.post('/', (req, res, next) => {
     const db = mysql.createConnection(conn);
     const query = `SELECT * FROM usuario WHERE
-                correo='${req.body.user}' AND
-                pass='${req.body.pass}'`;
+                email='${req.body.user}' AND
+                password='${req.body.pass}'`;
     db.query(query, (err, result, fields) => {
         if (err) {
             console.log(err);

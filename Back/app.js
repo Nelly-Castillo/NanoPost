@@ -8,15 +8,15 @@ const bodyParser = require('body-parser');
 const cors = require('./middleware/cors.js')
 
 // JSON web token
-const auth=require('./config/auth');
+const auth=require('./config/auth.js');
 
 
 
 //Rutas
 const usuarios=require('./routes/usuarios')
 const mensajes=require('./routes/mensajes')
-const mensajes=require('./routes/seguidos')
-const mensajes=require('./routes/noticia')
+const seguidos=require('./routes/seguidos')
+const noticia=require('./routes/noticia')
 const login=require('./routes/login');
 
 

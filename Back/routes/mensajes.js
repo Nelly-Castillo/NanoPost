@@ -6,6 +6,7 @@ const mysql = require('mysql');
 
 const conn = require('../config/database');
 
+
 router.get('/', (req, res, next) => {
     const db = mysql.createConnection(conn);
     const query = `SELECT * FROM mensaje_personal
